@@ -149,6 +149,32 @@ ORDER BY s.Quantity DESC;
 -- GROUP BY e.EmployeeID, e.FirstName, e.LastName, p.Name, s.Quantity, s.Date;
 
 
+-- PRACTICE --
+
+SELECT * FROM categories AS c
+INNER JOIN departments AS d
+ON c.DepartmentID = d.DepartmentID
+ORDER BY c.CategoryID ASC;
+
+-- Create a  department
+
+INSERT INTO departments (name)
+VALUES ("Clearance");
+
+-- Show the new addition
+
+SELECT * FROM departments;
+
+-- Create employees
+
+INSERT INTO employees (FirstName, MiddleInitial, LastName, EmailAddress, PhoneNumber, Title, DateOfBirth)
+VALUE ("Bart", "D", "Tholomue",  "bartthetart@gmail.com", "2225556677", "Geek Squad", "1996-02-15"); 
+
+-- show the addition
+
+SELECT * FROM employees
+WHERE firstname LIKE 'Bar%';
+
 
 
 
